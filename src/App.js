@@ -48,7 +48,7 @@ class App extends Component{
     const list = this.state.listOfPost;
     let updateList = list.map((item, idx) => {
         if(index == idx){
-          item.comments.push({"desc": content, "date": (new Date()).toLocaleString()});
+          item.comments.push({"content": content, "date": (new Date()).toLocaleString()});
         } 
         return item;
     });
@@ -60,6 +60,7 @@ class App extends Component{
     return (
       <Context.Provider value={{ addPost: this.handleAddPost, handleOnLike:this.handleOnLike, handleOnComment:this.handleOnComment, addComment:this.handleAddComment }} >
         <div className="App">
+          <h1 className="header">Social App</h1>
           <Post />
           <hr />
           <ListOfPost list={this.state.listOfPost}/>

@@ -18,7 +18,7 @@ class LisOfComment extends Component{
                             <div key={index}>
                                 <hr  className="dashed-line"/>
                                 <div className="comments-container">
-                                    <div>{item.desc}</div>
+                                    <div>{item.content}</div>
                                     <span> {item.date} </span>
                                 </div>
                             </div>

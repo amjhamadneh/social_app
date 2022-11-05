@@ -5,14 +5,14 @@ class Comment extends Component{
     constructor(props){
         super(props);
         this.state = {
-            description:""
+            content:""
         }
     }
 
     handleAddComment(e){
         e.preventDefault();
         const index = this.props.index;
-        this.context.addComment(index, this.state.description);
+        this.context.addComment(index, this.state.content);
     }
 
     render(){
@@ -22,8 +22,8 @@ class Comment extends Component{
                     className="form-control" 
                     type="text" 
                     placeholder="Write your comment" 
-                    value={this.state.description}
-                    onChange={(e) => this.setState({description:e.target.value})}
+                    value={this.state.content}
+                    onChange={(e) => this.setState({content:e.target.value})}
                 />
             </form>
         )
